@@ -432,3 +432,13 @@ button { cursor: pointer; border: 0; background: none; padding: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* narrow phones (≤400px) */
+.donut-legend div, .donut-legend span:nth-child(2) { min-width: 0; }
+.extras button { flex: 1 1 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 400px) {
+  .donut-wrap { gap: 12px; }
+  .donut-wrap svg { width: 112px; height: 112px; }
+  .extras svg { display: none; }
+  .extras button { font-size: 12px; padding: 9px 2px; }
+}
